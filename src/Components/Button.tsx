@@ -2,11 +2,12 @@ import React from "react";
 
 interface Props {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   variant?: string; // default, primary, info, success, warning, danger, dark
   size?: string; // sm, md, lg
   disabled?: boolean;
   className?: string;
+  type: "button" | "submit" | "reset";
 }
 const Button: React.FC<Props> = ({
   children,
@@ -15,6 +16,7 @@ const Button: React.FC<Props> = ({
   variant = "primary",
   size = "md",
   disabled,
+  type = "submit",
   ...rest
 }) => {
   return (
@@ -24,6 +26,7 @@ const Button: React.FC<Props> = ({
       }
       onClick={onClick}
       disabled={disabled}
+      type={type}
       {...rest}
     >
       {children}

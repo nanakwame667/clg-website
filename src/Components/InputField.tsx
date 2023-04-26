@@ -1,72 +1,83 @@
-import React, { ChangeEvent, FC } from "react";
+import React, { forwardRef, InputHTMLAttributes } from "react";
 
-interface InputFieldProps {
+interface InputFieldProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange"> {
   id: string;
   label?: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   type?: "text" | "password" | "email" | "number" | "textarea";
-  placeholder?: string;
   className?: string;
   required?: boolean;
-  requested?: boolean;
+  error?: string;
+  placeholder?: string;
   disabled?: boolean;
+  requested?: boolean;
 }
 
-const InputField: FC<InputFieldProps> = ({
-  id,
-  label,
-  value,
-  onChange,
-  type = "text",
-  placeholder = "",
-  className = "",
-  required = false,
-  disabled = false,
-  requested = false,
-}) => {
-  return (
-    <div className={`flex flex-col items-start  ${className}`}>
-      <label
-        htmlFor={id}
-        className={`block text-black font-normal text-sm ${className}`}
-      >
-        {label}
-        {requested && (
-          <span className="ml-2 text-lg text-primary-400 font-medium">*</span>
+const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
+  (
+    {
+      id,
+      label,
+      type = "text",
+      className = "",
+      required = false,
+      error,
+      placeholder,
+      disabled,
+      requested,
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <div className={`flex flex-col items-start  ${className}`}>
+        <label
+          htmlFor={id}
+          className={`block text-black font-normal text-sm ${className}`}
+        >
+          {label}
+          {requested && (
+            <span className="ml-2 text-lg text-primary-400 font-medium">*</span>
+          )}
+        </label>
+        <input
+          {...props}
+          ref={ref}
+          id={id}
+          type={type}
+          placeholder={placeholder}
+          required={required}
+          disabled={disabled}
+          className={`
+          border
+          border-stroke
+          border-border
+          rounded-none
+          w-[500px]
+          py-5 px-4
+          h-16
+          text-border
+          font-normal
+          text-sm
+          leading-tight
+          placeholder-placeholder
+          focus:outline-none
+          focus:shadow-outline
+          focus:ring-primary-200
+          focus:border-primary-200
+          focus:border-2
+          ${className}
+          ${error ? "border-red-600" : ""}
+          `}
+        />
+        {error && (
+          <p className="text-sm text-red-600" id={`${id}-error`}>
+            {error}
+          </p>
         )}
-      </label>
-      <input
-        id={id}
-        type={type}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        required={required}
-        disabled={disabled}
-        className={`
-        border
-        border-stroke
-        border-border
-        rounded-none
-        w-[500px]
-        py-5 px-4
-        h-16
-        text-border
-        font-normal
-        text-sm
-        leading-tight
-        placeholder-placeholder
-        focus:outline-none
-        focus:shadow-outline
-        focus:ring-primary-200
-        focus:border-primary-200
-        focus:border-2
-        ${className}
-        `}
-      />
-    </div>
-  );
-};
+      </div>
+    );
+  }
+);
 
 export default InputField;

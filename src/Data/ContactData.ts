@@ -7,7 +7,7 @@ import clock from "../assets/images/time.svg";
 export const ContactData: ContactProps[] = [
   {
     id: 1,
-    name: "20 North Audley Street",
+    name: "42 Brook Street, London, W1K 5DB",
     svg: location,
   },
   {
@@ -17,12 +17,7 @@ export const ContactData: ContactProps[] = [
   },
   {
     id: 3,
-    name: "+ 91 3453334436",
+    name: "(+44) (0) 207 129 1410",
     svg: phone,
-  },
-  {
-    id: 4,
-    name: "08:00AM - 5:00PM",
-    svg: clock,
   },
 ];
