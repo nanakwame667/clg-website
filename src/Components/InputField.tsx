@@ -29,7 +29,7 @@ const InputField: FC<InputFieldProps> = ({
     <div className={`flex flex-col items-start  ${className}`}>
       <label
         htmlFor={id}
-        className={`block text-gray-700 font-book text-sm ${className}`}
+        className={`block text-black font-normal text-sm ${className}`}
       >
         {label}
         {requested && (
@@ -47,12 +47,13 @@ const InputField: FC<InputFieldProps> = ({
         className={`
         border
         border-stroke
+        border-border
         rounded-none
         w-[500px]
         py-5 px-4
         h-16
-        text-gray-700
-        font-book
+        text-border
+        font-normal
         text-sm
         leading-tight
         placeholder-placeholder

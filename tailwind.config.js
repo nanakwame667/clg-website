@@ -33,6 +33,7 @@ export default {
         },
         black: "#929292",
         white: "#FFFFFF",
+        border: "#BCBCBC",
       },
       keyframes: {
         scaleIn: {

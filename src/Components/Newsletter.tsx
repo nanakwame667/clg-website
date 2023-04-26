@@ -19,7 +19,7 @@ const Newsletter = () => {
           onChange={(e) => setName(e.target.value)}
           placeholder="Email"
           required
-          className="w-[210px]"
+          className="w-full"
         />
         <Button variant="primary" size="lg" onClick={() => "Hello"}>
           <img src={arrow} alt="" width={20} />

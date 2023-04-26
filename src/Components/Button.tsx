@@ -6,10 +6,12 @@ interface Props {
   variant?: string; // default, primary, info, success, warning, danger, dark
   size?: string; // sm, md, lg
   disabled?: boolean;
+  className?: string;
 }
 const Button: React.FC<Props> = ({
   children,
   onClick,
+  className,
   variant = "primary",
   size = "md",
   disabled,
@@ -17,7 +19,9 @@ const Button: React.FC<Props> = ({
 }) => {
   return (
     <button
-      className={`btn ${variant} ${size}` + (disabled ? " disabled" : "")}
+      className={
+        `btn ${variant} ${size} ${className}` + (disabled ? " disabled" : "")
+      }
       onClick={onClick}
       disabled={disabled}
       {...rest}
