@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "../Components/HeroSection";
 import Banner from "../assets/images/about-banner.jpg";
 import Highlights from "../Components/Highlights";
+import Locations from "../assets/images/locations.svg";
 
 const About = () => {
   return (
@@ -45,6 +46,16 @@ const About = () => {
         <div className="bg-primary-500 w-[100px] h-[2px] mt-2"></div>
       </div>
       <Highlights />
+      <div
+        className="w-full h-[650px] bg-cover bg-no-repeat bg-center my-10"
+        style={{ backgroundImage: `url(${Locations})` }}
+      ></div>
+      <p className="text-center text-black font-normal text-2xl pt-6">
+        Our global presence spans across multiple locations, ensuring we are
+        well-
+        <br />
+        positioned to serve you with excellence.
+      </p>
     </div>
   );
 };
