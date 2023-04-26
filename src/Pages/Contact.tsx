@@ -26,7 +26,7 @@ const Contact = () => {
           </h1>
           <div className="bg-primary-500 w-[100px] h-[2px] mt-2"></div>
         </div>
-        <ContactForm value={textAreaValue} onChange={handleTextAreaChange} />
+        <ContactForm />
       </div>
     </div>
   );
