@@ -34,7 +34,21 @@ export default {
         black: "#929292",
         white: "#FFFFFF",
       },
+      keyframes: {
+        scaleIn: {
+          "0%": { transform: "scale(0)", opacity: 0 },
+          "100%": { transform: "scale(1)", opacity: 1 },
+        },
+      },
+      animation: {
+        scaleIn: "scaleIn 1s ease-in-out",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
+  variants: {
+    extend: {
+      animation: ["responsive", "motion-safe", "motion-reduce"],
+    },
+  },
 };
