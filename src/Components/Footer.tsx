@@ -7,7 +7,7 @@ import Newsletter from "./Newsletter";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full h-[600px] text-white bg-secondary-500 mt-20 items-center justify-center space-y-40 pt-20">
+    <div className="flex flex-col w-full h-[600px] text-white bg-secondary-500 mt-10 items-center justify-center space-y-40 pt-20">
       <div className="flex flex-row px-24 w-full justify-between items-center">
         <div className="flex flex-col space-y-6">
           <Logo className="w-[220px]" />
