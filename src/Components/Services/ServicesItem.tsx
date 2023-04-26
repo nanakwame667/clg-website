@@ -6,7 +6,7 @@ const ServicesItem = () => {
   return (
     <div className="flex flex-row items-center justify-center flex-wrap gap-20 w-full h-full px-24">
       {ServicesData.map(({ id, title, text, svg }) => (
-        <Link to="/services">
+        <Link to={`/services`}>
           <div
             key={id}
             className="flex flex-col items-start justify-center px-6 py-12 text-left shadow-sm hover:border-t-4 hover:border-primary-500 hover:shadow-md cursor-pointer animate-scaleIn"
