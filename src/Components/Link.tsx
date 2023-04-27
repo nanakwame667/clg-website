@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, NavLinkProps, useNavigate } from "react-router-dom";
 
-interface ReloadNavLinkProps extends NavLinkProps {
-  onClick?: () => void;
-}
+interface ReloadNavLinkProps extends NavLinkProps {}
 
 const Link: React.FC<ReloadNavLinkProps> = ({
   to,
   className,
   style,
-  onClick,
+  children,
   ...rest
 }) => {
   const navigate = useNavigate();
@@ -17,15 +15,13 @@ const Link: React.FC<ReloadNavLinkProps> = ({
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
-    if (onClick) {
-      onClick();
-    }
+    event.preventDefault();
     navigate(to as string, { replace: true });
-    setTimeout(() => {
-      window.location.href = to as string; // force a full page reload
-      window.scrollTo(0, 0); // scroll to top of page
-    }, 0);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [to]);
 
   return (
     <NavLink
@@ -34,7 +30,9 @@ const Link: React.FC<ReloadNavLinkProps> = ({
       style={style}
       onClick={handleClick}
       {...rest}
-    />
+    >
+      {children}
+    </NavLink>
   );
 };
 
