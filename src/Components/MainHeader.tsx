@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import Close from "../assets/images/cancel.svg";
 import Menu from "../assets/images/menu.svg";
 import { LinksData } from "../Data/LinksData";
+import Link from "./Link";
 
 const MainHeader = () => {
   const [open, setOpen] = useState(false);
@@ -79,7 +80,7 @@ const MainHeader = () => {
                     key={id}
                     className="lg:ml-8 lg:my-0 my-7 text-lg lg:px-5 font-light text-black-500 hover:text-black-400"
                   >
-                    <NavLink
+                    <Link
                       to={route}
                       style={({ isActive }) =>
                         isActive ? activeStyle : undefined
@@ -87,7 +88,7 @@ const MainHeader = () => {
                       onClick={handleNavLinkClick}
                     >
                       {name}
-                    </NavLink>
+                    </Link>
                   </li>
                 </ul>
               </div>
