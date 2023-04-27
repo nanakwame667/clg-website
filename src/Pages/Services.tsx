@@ -7,11 +7,11 @@ const Services = () => {
   return (
     <div>
       <HeroSection backgroundImage={Banner}>
-        <h1 className=" font-medium text-[60px]">
+        <h1 className="header font-medium text-[60px]">
           <span className="text-primary-500">OUR</span> SERVICES
         </h1>
       </HeroSection>
-      <div className="flex flex-col h-96  items-center space-y-12 justify-center w-full text-center">
+      <div className="main-section flex flex-col h-96  items-center space-y-12 justify-center w-full text-center">
         <h1 className="text-secondary-500 font-semibold text-[50px]">
           What we do
         </h1>
@@ -25,20 +25,25 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="flex flex-col items-center mt-6">
+      <div className="flex flex-col items-center lg:mt-6">
         <h1 className="text-secondary-500 font-semibold text-[36px]">
           Services
         </h1>
         <div className="bg-primary-500 w-[100px] h-[2px] mt-2"></div>
       </div>
-      <div className="px-24 w-full my-10">
+      <div className="service px-24 w-full my-10">
         {ServicesData.map(({ id, title, text, svg }) => (
           <div
             key={id}
-            className="flex flex-row w-full items-center space-x-16 py-20"
+            className="service-item flex flex-row w-full items-center space-x-16 py-20"
           >
-            <div className="flex items-center justify-center bg-primary-50 px-6 py-6 rounded-full">
-              <img src={svg} alt="" width={150} />
+            <div className="flex items-center justify-center bg-primary-50 px-4 py-4 lg:px-6 lg:py-6 rounded-full">
+              <img
+                src={svg}
+                alt=""
+                width={150}
+                className=" w-[80px] lg:w-[150px]"
+              />
             </div>
             <div className="space-y-4 mt-6">
               <h1 className="text-secondary-500 font-medium text-[28px]">

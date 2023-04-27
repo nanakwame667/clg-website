@@ -12,7 +12,7 @@ const HeroSection: FC<HeroSectionProps> = ({
 }) => {
   return (
     <div
-      className={`relative w-full h-[850px] bg-cover bg-no-repeat bg-center ${className}`}
+      className={`hero relative w-full h-[850px] bg-cover bg-no-repeat bg-center ${className}`}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-[#000] opacity-40 bg-blend-overlay"></div>

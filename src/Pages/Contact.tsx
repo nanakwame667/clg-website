@@ -14,12 +14,12 @@ const Contact = () => {
   return (
     <div>
       <HeroSection backgroundImage={Banner}>
-        <h1 className=" font-medium text-[60px]">
+        <h1 className="header font-medium text-[60px]">
           CONTACT
           <span className="text-primary-500">US</span>
         </h1>
       </HeroSection>
-      <div className="flex flex-col w-full items-center px-24 py-44">
+      <div className="flex flex-col w-full items-center px-6 md:px-12 lg:px-60 py-44">
         <div className="flex flex-col items-center mt-6">
           <h1 className="text-secondary-500 font-semibold text-[36px]">
             Get In Touch

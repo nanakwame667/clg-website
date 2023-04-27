@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
@@ -12,23 +12,39 @@ const MainHeader = () => {
     borderBottom: "2px solid rgba(234, 115, 23)",
   };
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [open]);
+
+  const handleNavLinkClick = () => {
+    setOpen(false);
+  };
+
   return (
     <div>
       <Header
         stickyAt={890}
-        className="flex flex-row items-center px-24 justify-between 
+        className="flex flex-row items-center px-10 justify-between
+
     lg:px-24"
       >
         <Logo />
         <nav>
-          <button
-            className="lg:hidden cursor-pointer"
-            onClick={() => setOpen(!open)}
-          >
-            <img src={open ? Close : Menu} alt="menu" className="" />
-          </button>
+          <div className="relative z-20">
+            <button
+              className="lg:hidden cursor-pointer"
+              onClick={() => setOpen(!open)}
+            >
+              <img src={open ? Close : Menu} alt="menu" className="" />
+            </button>
+          </div>
           <div
             className={`
+            nav-header
           lg:flex
           lg:items-center
           lg:pb-0
@@ -39,17 +55,20 @@ const MainHeader = () => {
           z-10
           left-0
           w-full
+          h-screen
+          lg:h-auto
           lg:w-auto
           lg:pl-0
           pl-9
           transform
-        translate-x-0
-        duration-500
-        ease-in
+          transition-transform
+          duration-500
+          ease-in
+          overflow-y-hidden
           ${
             open
-              ? " h-screen top-20 opacity-100 flex flex-col items-start justify-content-center pt-14"
-              : "top-[-490px]"
+              ? "top-0 bg-secondary-500 opacity-100 flex flex-col items-start justify-center pt-14"
+              : "-translate-y-full lg:translate-y-0"
           } lg:opacity-100 
         `}
           >
@@ -65,6 +84,7 @@ const MainHeader = () => {
                       style={({ isActive }) =>
                         isActive ? activeStyle : undefined
                       }
+                      onClick={handleNavLinkClick}
                     >
                       {name}
                     </NavLink>

@@ -16,7 +16,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     ref
   ) => {
     return (
-      <div className="relative flex flex-col">
+      <div className="flex flex-col w-full">
         {label && (
           <label htmlFor={id} className="mb-1 text-sm text-black font-normal">
             {label} {required && <span className="text-red-500">*</span>}
@@ -27,7 +27,13 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           ref={ref}
           id={id}
           required={required}
-          className={`resize-none outline-none p-2         focus:outline-none
+          className={`
+          resize-none 
+          outline-none 
+          mt-2 mb-2 pt-4 pl-4
+          w-full
+          h-[300px]        
+          focus:outline-none
           focus:shadow-outline
           focus:ring-primary-200
           focus:border-primary-200

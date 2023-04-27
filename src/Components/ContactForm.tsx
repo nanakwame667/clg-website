@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-[600px] mt-16"
+      className="contact w-full mt-16 lg:px-24"
       noValidate
     >
       <InputField
@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
         placeholder="Enter your full name"
         required
         error={errors.name?.message}
-        className="mb-4 w-full"
+        className="input mb-4 w-full"
       />
       <InputField
         id="email"
@@ -68,7 +68,7 @@ const ContactForm: React.FC = () => {
         placeholder="Enter your email address"
         required
         error={errors.email?.message}
-        className="mb-4 w-full"
+        className="input mb-4 w-full"
       />
       <TextArea
         id="enquiry"
@@ -76,13 +76,13 @@ const ContactForm: React.FC = () => {
         {...register("enquiry")}
         placeholder="Make your enquiry"
         error={errors.enquiry?.message}
-        className="w-full h-[300px] mt-2 mb-2 pt-4 pl-4 border border-border rounded-none"
+        className="input w-full border border-border rounded-none"
       />
       <Button
         type="submit"
         variant="primary"
         size="lg"
-        className="w-full mt-12"
+        className="input w-full mt-12"
       >
         Send Form
       </Button>

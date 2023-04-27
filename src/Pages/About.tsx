@@ -8,11 +8,11 @@ const About = () => {
   return (
     <div>
       <HeroSection backgroundImage={Banner}>
-        <h1 className=" font-medium text-[60px]">
+        <h1 className="header font-medium text-[60px]">
           <span className="text-primary-500">ABOUT</span> US
         </h1>
       </HeroSection>
-      <div className="flex flex-col h-full py-20  items-center space-y-12 justify-center w-full text-center">
+      <div className="main-section flex flex-col h-full py-20  items-center space-y-12 justify-center w-full text-center">
         <h1 className="text-secondary-500 font-semibold text-[50px]">
           Company Profile
         </h1>
@@ -47,10 +47,10 @@ const About = () => {
       </div>
       <Highlights />
       <div
-        className="w-full h-[650px] bg-cover bg-no-repeat bg-center my-10"
+        className="locations w-full h-[650px] bg-cover bg-no-repeat bg-center my-10"
         style={{ backgroundImage: `url(${Locations})` }}
       ></div>
-      <p className="text-center text-black font-normal text-2xl pt-6">
+      <p className="location-text text-center text-black font-normal text-2xl pt-6">
         Our global presence spans across multiple locations, ensuring we are
         well-
         <br />
