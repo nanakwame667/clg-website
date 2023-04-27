@@ -1,4 +1,8 @@
-import React, { forwardRef, TextareaHTMLAttributes } from "react";
+import React, {
+  forwardRef,
+  TextareaHTMLAttributes,
+  ChangeEventHandler,
+} from "react";
 
 interface TextAreaProps
   extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "onChange"> {
@@ -8,11 +12,21 @@ interface TextAreaProps
   required?: boolean;
   error?: string;
   disabled?: boolean;
+  onChange?: ChangeEventHandler<HTMLTextAreaElement>;
 }
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (
-    { id, label, className = "", required = false, error, disabled, ...props },
+    {
+      id,
+      label,
+      className = "",
+      required = false,
+      error,
+      disabled,
+      onChange,
+      ...props
+    },
     ref
   ) => {
     return (
@@ -27,6 +41,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           ref={ref}
           id={id}
           required={required}
+          onChange={onChange}
           className={`
           resize-none 
           outline-none 
