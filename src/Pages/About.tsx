@@ -13,10 +13,20 @@ const About = () => {
         </h1>
       </HeroSection>
       <div className="main-section flex flex-col h-full py-20  items-center space-y-12 justify-center w-full text-center">
-        <h1 className="text-secondary-500 font-semibold text-[50px]">
+        <h1
+          className="text-secondary-500 font-semibold text-[50px]"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
           Company Profile
         </h1>
-        <p className="text-black text-xl  w-3/4  ">
+        <p
+          className="text-black text-xl  w-3/4 "
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-delay="300"
+          data-aos-offset="0"
+        >
           Welcome to CLG Capital Management, your trusted partner in providing
           exceptional lending solutions to small and mid-cap companies. Founded
           in 2023 by industry expert Charles Ofori, our firm is built on over 16
@@ -39,7 +49,13 @@ const About = () => {
           support.
         </p>
       </div>
-      <div className="flex flex-col items-center mt-6">
+      <div
+        className="flex flex-col items-center mt-6"
+        data-aos="fade-right"
+        data-aos-easing="ease-out-cubic"
+        data-aos-delay="300"
+        data-aos-offset="0"
+      >
         <h1 className="text-secondary-500 font-semibold text-[36px]">
           Highlights
         </h1>

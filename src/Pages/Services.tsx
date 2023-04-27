@@ -12,10 +12,20 @@ const Services = () => {
         </h1>
       </HeroSection>
       <div className="main-section flex flex-col h-96  items-center space-y-12 justify-center w-full text-center">
-        <h1 className="text-secondary-500 font-semibold text-[50px]">
+        <h1
+          className="text-secondary-500 font-semibold text-[50px]"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
           What we do
         </h1>
-        <p className="text-black text-xl  w-3/4  ">
+        <p
+          className="text-black text-xl  w-3/4  "
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-delay="300"
+          data-aos-offset="0"
+        >
           At CLG Capital Management, we specialize in providing a comprehensive
           suite of financial services, expertly designed to empower small and
           mid-cap companies to thrive in today's competitive business landscape.
@@ -25,7 +35,13 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="flex flex-col items-center lg:mt-6">
+      <div
+        className="flex flex-col items-center lg:mt-6"
+        data-aos="fade-right"
+        data-aos-easing="ease-out-cubic"
+        data-aos-delay="300"
+        data-aos-offset="0"
+      >
         <h1 className="text-secondary-500 font-semibold text-[36px]">
           Services
         </h1>
@@ -36,6 +52,9 @@ const Services = () => {
           <div
             key={id}
             className="service-item flex flex-row w-full items-center space-x-16 py-20"
+            data-aos="flip-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
           >
             <div className="flex items-center justify-center bg-primary-50 px-4 py-4 lg:px-6 lg:py-6 rounded-full">
               <img

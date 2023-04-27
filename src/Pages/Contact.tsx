@@ -20,7 +20,13 @@ const Contact = () => {
         </h1>
       </HeroSection>
       <div className="flex flex-col w-full items-center px-6 md:px-12 lg:px-60 py-44">
-        <div className="flex flex-col items-center mt-6">
+        <div
+          className="flex flex-col items-center mt-6"
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-delay="300"
+          data-aos-offset="0"
+        >
           <h1 className="text-secondary-500 font-semibold text-[36px]">
             Get In Touch
           </h1>

@@ -9,6 +9,9 @@ const TeamsItem = () => {
         <div
           key={id}
           className="border-border border px-12 py-12 mb-20 rounded-xl"
+          data-aos="flip-up"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
         >
           <div className="flex flex-col items-center lg:flex-row w-full lg:items-start lg:space-x-20">
             <div>

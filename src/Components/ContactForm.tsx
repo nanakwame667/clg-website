@@ -53,6 +53,9 @@ const ContactForm: React.FC = () => {
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="contact w-full mt-16 lg:px-24"
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
       noValidate
     >
       <InputField

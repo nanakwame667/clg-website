@@ -9,7 +9,10 @@ const ServicesItem = () => {
         <Link to={`/services`}>
           <div
             key={id}
-            className="flex flex-col items-start justify-center px-6 py-12 text-left shadow-sm hover:border-t-4 hover:border-primary-500 hover:shadow-md cursor-pointer animate-scaleIn"
+            className="card flex flex-col items-start justify-center px-6 py-12 text-left shadow-sm hover:border-t-4 hover:border-primary-500 hover:shadow-md cursor-pointer animate-scaleIn"
+            data-aos="flip-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
           >
             <div className="flex items-center justify-center bg-primary-50 px-4 py-4 rounded-full">
               <img src={svg} alt="" />
