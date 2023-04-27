@@ -1,4 +1,4 @@
-import React, { forwardRef, InputHTMLAttributes } from "react";
+import React, { forwardRef, InputHTMLAttributes, ChangeEvent } from "react";
 
 interface InputFieldProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange"> {
@@ -11,6 +11,7 @@ interface InputFieldProps
   placeholder?: string;
   disabled?: boolean;
   requested?: boolean;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
@@ -25,6 +26,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
       placeholder,
       disabled,
       requested,
+      onChange,
       ...props
     },
     ref
@@ -48,6 +50,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
           placeholder={placeholder}
           required={required}
           disabled={disabled}
+          onChange={onChange}
           className={`
           border
           border-stroke

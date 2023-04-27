@@ -7,6 +7,10 @@ import Button from "./Button";
 import InputField from "./InputField";
 import TextArea from "./TextArea";
 
+const apiPublicKey = import.meta.env.VITE_EMAIL_JS_PUBLIC_API_KEY;
+
+emailjs.init(apiPublicKey);
+
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
   email: yup.string().email("Invalid email").required("Email is required"),

@@ -21,7 +21,12 @@ const Newsletter = () => {
           required
           className="w-full"
         />
-        <Button variant="primary" size="lg" onClick={() => "Hello"}>
+        <Button
+          type="submit"
+          variant="primary"
+          size="lg"
+          onClick={() => "Hello"}
+        >
           <img src={arrow} alt="" width={20} />
         </Button>
       </form>
