@@ -32,7 +32,7 @@ const Home = () => {
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
         >
-          Why are we so so great?
+          Why are we so great?
         </h1>
         <p
           className="text-black text-xl  w-3/4  "
