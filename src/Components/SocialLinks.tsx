@@ -7,9 +7,9 @@ const SocialLinks = () => {
         <div>
           <ul>
             <li key={id} className="">
-              <Link to={route}>
+              <a href={route} target="_blank" rel="noopener noreferrer">
                 <img src={svg} alt="" />
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

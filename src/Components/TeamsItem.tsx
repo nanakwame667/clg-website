@@ -4,11 +4,11 @@ import check from "../assets/images/check.svg";
 
 const TeamsItem = () => {
   return (
-    <div className="px-10 lg:px-0 mt-20 lg:flex-row flex flex-col space-x-10">
+    <div className="items-center justify-center px-10 lg:px-0 mt-20 lg:flex-row flex flex-col space-x-10">
       {TeamsData.map(({ id, title, name, image, responsibility, career }) => (
         <div
           key={id}
-          className="border-border border px-12 py-12 mb-20 rounded-xl"
+          className="border-border border px-12 py-12 mb-20 rounded-xl w-full items-center"
           data-aos="flip-right"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
