@@ -7,7 +7,7 @@ const ServiceComponent = () => {
       className="main-section flex flex-col items-center w-full text-center space-y-12 mb-20"
       data-aos-container="body"
     >
-      <h1
+      {/* <h1
         className="text-secondary-500 font-bold text-[50px]"
         data-aos="fade-down"
         data-aos-duration="2000"
@@ -22,7 +22,7 @@ const ServiceComponent = () => {
         data-aos-offset="0"
       >
         Don't miss out on these game-changing services!
-      </p>
+      </p> */}
       <ServicesItem />
     </div>
   );

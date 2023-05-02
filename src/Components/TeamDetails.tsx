@@ -10,9 +10,9 @@ const TeamDetails = () => {
           data-aos="fade-down"
           data-aos-duration="2000"
         >
-          Leadership Team
+          Management Team
         </h1>
-        <p
+        {/* <p
           className="text-black text-2xl  w-2/4"
           data-aos="fade-right"
           data-aos-easing="ease-out-cubic"
@@ -21,7 +21,7 @@ const TeamDetails = () => {
         >
           The executive team possesses specialized expertise, complimentary
           skillsets and a strong working relationship
-        </p>
+        </p> */}
       </div>
       <TeamsItem />
     </div>

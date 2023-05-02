@@ -7,8 +7,8 @@ const Services = () => {
   return (
     <div>
       <HeroSection backgroundImage={Banner}>
-        <h1 className="header font-medium text-[60px]">
-          <span className="text-primary-500">OUR</span> SERVICES
+        <h1 className="header font-light text-[60px]">
+          <span className="text-white font-bold">OUR</span> SERVICES
         </h1>
       </HeroSection>
       <div className="main-section flex flex-col h-96  items-center space-y-12 justify-center w-full text-center">

@@ -4,14 +4,14 @@ import check from "../assets/images/check.svg";
 
 const TeamsItem = () => {
   return (
-    <div className="px-10 lg:px-0 mt-20">
+    <div className="px-10 lg:px-0 mt-20 lg:flex-row flex flex-col space-x-10">
       {TeamsData.map(({ id, title, name, image, responsibility, career }) => (
         <div
           key={id}
           className="border-border border px-12 py-12 mb-20 rounded-xl"
-          data-aos="flip-up"
+          data-aos="flip-right"
           data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
         >
           <div className="flex flex-col items-center lg:flex-row w-full lg:items-start lg:space-x-20">
             <div>
@@ -22,7 +22,7 @@ const TeamsItem = () => {
                 <h1 className="font-semibold text-[35px]">{name}</h1>
                 <h2 className="font-normal text-xl text-black">{title}</h2>
               </div>
-              <div>
+              {/* <div>
                 <h1 className="font-semibold text-[26px] text-secondary-500 mt-16">
                   Responsibilities
                 </h1>
@@ -36,10 +36,10 @@ const TeamsItem = () => {
                   <img src={check} alt="" />
                   <p className="font-normal text-xl text-black">{title}</p>
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
-          <div>
+          {/* <div>
             <div>
               <h1 className="font-semibold text-[26px] text-secondary-500 mt-16">
                 Career Highlights
@@ -55,7 +55,7 @@ const TeamsItem = () => {
                 <p className="font-normal text-xl text-black">{title}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       ))}
     </div>

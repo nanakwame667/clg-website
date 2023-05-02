@@ -9,12 +9,12 @@ const Home = () => {
     <div className="w-full">
       <HeroSection backgroundImage={Banner}>
         <h1
-          className="header font-medium text-[60px]"
+          className="header font-light text-[60px]"
           data-aos="flip-down"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
         >
-          <span className="text-primary-500">CLG</span> CAPITAL
+          <span className="text-white font-bold">CLG</span> CAPITAL
         </h1>
         <p
           className="sub text-[38px]"
@@ -22,7 +22,7 @@ const Home = () => {
           data-aos-duration="2000"
           data-aos-anchor-placement="top-bottom"
         >
-          Creative Solutions for Raising Capital
+          Dynamic Capital Solutions
         </p>
       </HeroSection>
       <div className="main-section flex flex-col h-96  items-center space-y-12 justify-center w-full text-center">
@@ -32,7 +32,7 @@ const Home = () => {
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
         >
-          Why are we so great?
+          The CLG Strategy
         </h1>
         <p
           className="text-black text-xl  w-3/4  "
@@ -41,10 +41,9 @@ const Home = () => {
           data-aos-delay="300"
           data-aos-offset="0"
         >
-          CLG CAPITAL specializes in structured transactions. Our investment
-          objective is to generate returns over time that are significantly
-          above the stock market and generally uncorrelated with other
-          investment strategies.
+          CLG CAPITAL specializes in structured transactions to high growth
+          companies providing transparent capital for the companies we invest
+          in.
         </p>
       </div>
       <ServiceComponent />
@@ -52,12 +51,12 @@ const Home = () => {
         className="locations w-full h-[650px] bg-cover bg-no-repeat bg-center my-10"
         style={{ backgroundImage: `url(${Locations})` }}
       ></div>
-      <p className="location-text text-center text-black font-normal text-2xl pt-6">
+      {/* <p className="location-text text-center text-black font-normal text-2xl pt-6">
         Our global presence spans across multiple locations, ensuring we are
         well-
         <br />
         positioned to serve you with excellence.
-      </p>
+      </p> */}
     </div>
   );
 };

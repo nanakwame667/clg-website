@@ -7,8 +7,8 @@ const Team = () => {
   return (
     <div>
       <HeroSection backgroundImage={Banner}>
-        <h1 className="header font-medium text-[60px]">
-          <span className="text-primary-500">OUR</span> TEAM
+        <h1 className="header font-light text-[60px]">
+          <span className="text-white font-bold">OUR</span> TEAM
         </h1>
       </HeroSection>
 
