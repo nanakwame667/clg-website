@@ -42,8 +42,7 @@ const Home = () => {
           data-aos-offset="0"
         >
           CLG CAPITAL specializes in structured transactions to high growth
-          companies providing transparent capital for the companies we invest
-          in.
+          companies providing patient capital for the companies we invest in.
         </p>
       </div>
       <ServiceComponent />
