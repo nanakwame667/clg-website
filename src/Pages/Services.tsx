@@ -60,8 +60,8 @@ const Services = () => {
               <img
                 src={svg}
                 alt=""
-                width={150}
-                className=" w-[80px] lg:w-[150px]"
+                width={100}
+                className=" w-[80px] lg:w-[100px]"
               />
             </div>
             <div className="space-y-4 mt-6">
