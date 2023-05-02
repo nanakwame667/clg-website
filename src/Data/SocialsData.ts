@@ -8,6 +8,6 @@ export const SocialsData: SocialsProps[] = [
   {
     id: 1,
     svg: linkedin,
-    route: "/",
+    route: "https://www.linkedin.com/in/charles-ofori-8301b8130",
   },
 ];

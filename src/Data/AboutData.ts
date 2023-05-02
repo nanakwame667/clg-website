@@ -13,7 +13,7 @@ export const AboutData = [
   },
   {
     id: 4,
-    title: `CLG CAPITAL’s investment committee including it’s funding 
+    title: `CLG CAPITAL’s investment committee with it’s funding 
         partner Macquarie Investment Bank has transacted in over
         $1 bn of deals.`,
   },

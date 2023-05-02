@@ -13,9 +13,9 @@ const TeamsItem = () => {
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
         >
-          <div className="flex flex-col items-center lg:flex-row w-full lg:items-start lg:space-x-20">
+          <div className="flex flex-col items-center lg:flex-row w-full lg:items-start lg:space-x-12">
             <div>
-              <img src={image} alt="" />
+              <img src={image} alt="" className="w-[90%]" />
             </div>
             <div>
               <div className="flex flex-col items-start space-y-4 mt-10">
