@@ -11,7 +11,7 @@ export const TeamsData: TeamsProps[] = [
     portfolio: `Previously portfolio manager at Atlas Capital Markets, integral to implementing a strategy which 
     generated stellar returns in 7 years at Atlas. Prior to Atlas Charles worked for 10 years at Goldman 
     Sachs London as an Equity Derivatives trader specialising in single stock delta 1. Whilst at GS he 
-    was able to increase revenue by over 300% for his trading desk and improved procedures to 
+    was able to help increase revenue for his trading desk and improved procedures to 
     exceed management requirements. 
     Charles is responsible for guiding and executing the firm’s investment strategy and will oversee 
     research, portfolio construction and investment management.`,
