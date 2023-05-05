@@ -4,6 +4,7 @@ import Banner from "../assets/images/new-about-banner.jpg";
 import Highlights from "../Components/Highlights";
 import Locations from "../assets/images/locations.svg";
 import FooterImage from "../Components/FooterImage";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
@@ -13,6 +14,18 @@ const About = () => {
           <span className="text-white font-bold">ABOUT</span> US
         </h1>
       </HeroSection>
+      <Helmet>
+        <title>Company Profile</title>
+        <meta
+          name="about"
+          content="Welcome to CLG Capital, your trusted partner in providing
+            exceptional lending solutions to small and mid-cap companies.
+            Founded in 2023 by industry expert Charles Ofori, our firm is built
+            on over 16 years of experience in working with and empowering
+            businesses to reach their full potential."
+        />
+        <link rel="canonical" href="https://clgcap.com/about" />
+      </Helmet>
       <div className="main-section flex flex-col h-full py-20  items-center space-y-12 justify-center w-full text-center">
         <h1
           className="text-secondary-500 font-semibold text-[50px]"
