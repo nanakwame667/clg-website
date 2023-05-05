@@ -8,7 +8,7 @@ const Team = () => {
     <div>
       <HeroSection backgroundImage={Banner}>
         <h1 className="header font-light text-[60px]">
-          <span className="text-white font-bold">OUR</span> TEAM
+          <span className="text-white font-bold">LEADERSHIP</span>
         </h1>
       </HeroSection>
 

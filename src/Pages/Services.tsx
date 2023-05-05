@@ -26,12 +26,11 @@ const Services = () => {
           data-aos-delay="300"
           data-aos-offset="0"
         >
-          At CLG Capital Management, we specialize in providing a comprehensive
-          suite of financial services, expertly designed to empower small and
-          mid-cap companies to thrive in today's competitive business landscape.
-          Our extensive experience and proven track record set the foundation
-          for success, as we partner with you to achieve your strategic
-          objectives.
+          At CLG Capital, we specialize in providing a comprehensive suite of
+          financial services, expertly designed to empower small and mid-cap
+          companies to thrive in today's competitive business landscape. Our
+          extensive experience and proven track record set the foundation for
+          success, as we partner with you to achieve your strategic objectives.
         </p>
       </div>
 

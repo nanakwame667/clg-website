@@ -27,11 +27,11 @@ const About = () => {
           data-aos-delay="300"
           data-aos-offset="0"
         >
-          Welcome to CLG Capital Management, your trusted partner in providing
-          exceptional lending solutions to small and mid-cap companies. Founded
-          in 2023 by industry expert Charles Ofori, our firm is built on over 16
-          years of experience in working with and empowering businesses to reach
-          their full potential.
+          Welcome to CLG Capital, your trusted partner in providing exceptional
+          lending solutions to small and mid-cap companies. Founded in 2023 by
+          industry expert Charles Ofori, our firm is built on over 16 years of
+          experience in working with and empowering businesses to reach their
+          full potential.
           <br />
           <br /> We take pride in our proven track record, a legacy that began
           with our predecessor investment company, Atlas Capital Markets LLC

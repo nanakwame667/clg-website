@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-inner flex flex-row  w-full justify-between items-center ">
         <div className="flex flex-col space-y-6">
           <Logo className="w-[220px]" />
-          <h1>Creative Solutions for raising capital</h1>
+          <h1>Dynamic Capital Solutions</h1>
           <SocialLinks />
         </div>
         <div className="flex flex-col">
