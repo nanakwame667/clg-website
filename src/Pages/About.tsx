@@ -1,8 +1,9 @@
 import React from "react";
 import HeroSection from "../Components/HeroSection";
-import Banner from "../assets/images/about-banner.jpg";
+import Banner from "../assets/images/new-about-banner.jpg";
 import Highlights from "../Components/Highlights";
 import Locations from "../assets/images/locations.svg";
+import FooterImage from "../Components/FooterImage";
 
 const About = () => {
   return (
@@ -63,7 +64,7 @@ const About = () => {
       </div>
       <Highlights />
       <div
-        className="locations w-full h-[650px] bg-cover bg-no-repeat bg-center my-10"
+        className="locations w-full h-[650px] bg-cover bg-no-repeat bg-center my-10 2xl:h-[800px]"
         style={{ backgroundImage: `url(${Locations})` }}
       ></div>
       {/* <p className="location-text text-center text-black font-normal text-2xl pt-6">
@@ -72,6 +73,7 @@ const About = () => {
         <br />
         positioned to serve you with excellence.
       </p> */}
+      <FooterImage backgroundImage={Banner} />
     </div>
   );
 };

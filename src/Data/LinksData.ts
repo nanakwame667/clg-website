@@ -13,13 +13,13 @@ export const LinksData: LinksProps[] = [
   },
   {
     id: 3,
-    name: "Team",
-    route: "/team",
+    name: "About",
+    route: "/about",
   },
   {
     id: 4,
-    name: "About",
-    route: "/about",
+    name: "Management",
+    route: "/team",
   },
   {
     id: 5,

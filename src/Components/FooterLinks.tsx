@@ -18,7 +18,7 @@ const links = [
   },
   {
     id: 4,
-    name: "Team",
+    name: "Management",
     route: "/team",
   },
 ];

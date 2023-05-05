@@ -1,7 +1,9 @@
 import React from "react";
 import HeroSection from "../Components/HeroSection";
-import Banner from "../assets/images/services-banner.jpg";
+import Banner from "../assets/images/about-banner.jpg";
 import { ServicesData } from "../Data/ServicesData";
+import ServiceComponent from "../Components/Services/ServiceComponent";
+import FooterImage from "../Components/FooterImage";
 
 const Services = () => {
   return (
@@ -46,7 +48,8 @@ const Services = () => {
         </h1>
         <div className="bg-primary-500 w-[100px] h-[2px] mt-2"></div>
       </div>
-      <div className="service px-24 w-full my-10">
+      <ServiceComponent />
+      {/* <div className="service px-24 w-full my-10">
         {ServicesData.map(({ id, title, text, svg }) => (
           <div
             key={id}
@@ -71,7 +74,8 @@ const Services = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
+      <FooterImage backgroundImage={Banner} />
     </div>
   );
 };

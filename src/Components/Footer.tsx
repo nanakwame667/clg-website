@@ -9,9 +9,9 @@ const Footer = () => {
   return (
     <div className="footer flex flex-col w-full px-24 py-36 text-white bg-secondary-500 mt-10 items-center justify-center space-y-40 ">
       <div className="footer-inner flex flex-row  w-full justify-between items-center ">
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col items-center space-y-6">
           <Logo className="w-[220px]" />
-          <h1>Dynamic Capital Solutions</h1>
+          <h1 className="text-[24px]">Growth Capital</h1>
           <SocialLinks />
         </div>
         <div className="flex flex-col">

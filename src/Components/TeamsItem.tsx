@@ -4,58 +4,33 @@ import check from "../assets/images/check.svg";
 
 const TeamsItem = () => {
   return (
-    <div className="items-center justify-center px-10 lg:px-0 mt-20 lg:flex-row flex flex-col space-x-10">
-      {TeamsData.map(({ id, title, name, image, responsibility, career }) => (
+    <div className="items-center justify-center px-10 lg:px-0 mt-20 lg:flex-col flex flex-col space-x-10">
+      {TeamsData.map(({ id, title, name, image, portfolio }) => (
         <div
           key={id}
-          className="border-border border px-12 py-12 mb-20 rounded-xl w-full items-center"
+          className="border-border border px-10 py-16 mb-20 rounded-xl lg:w-3/4  items-center "
           data-aos="flip-right"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
         >
-          <div className="flex flex-col items-center lg:flex-row w-full lg:items-start lg:space-x-12">
-            <div>
-              <img src={image} alt="" className="w-[90%]" />
+          <div className="flex flex-col items-center justify-center lg:flex-row w-full lg:items-center lg:space-x-12 3xl:space-x-0 ">
+            <div className="lg:w-[30%]">
+              <img
+                src={image}
+                alt=""
+                className="w-[90%] lg:w-[400px] lg:h-[400px] "
+              />
             </div>
-            <div>
-              <div className="flex flex-col items-start space-y-4 mt-10">
+            <div className="lg:w-2/4 space-y-6">
+              <div className="flex flex-col items-start space-y-0 mt-10">
                 <h1 className="font-semibold text-[35px]">{name}</h1>
-                <h2 className="font-normal text-xl text-black">{title}</h2>
+                <h2 className="text-xl text-black font-semibold">{title}</h2>
               </div>
-              {/* <div>
-                <h1 className="font-semibold text-[26px] text-secondary-500 mt-16">
-                  Responsibilities
-                </h1>
-                <div className="bg-primary-500 w-[100px] h-[2px] mt-2"></div>
+              <div>
+                <p className="2xl:text-[20px]">{portfolio}</p>
               </div>
-              {responsibility.map(({ id, title }) => (
-                <div
-                  key={id}
-                  className="flex flex-row space-y-6 items-center space-x-3 mt-6"
-                >
-                  <img src={check} alt="" />
-                  <p className="font-normal text-xl text-black">{title}</p>
-                </div>
-              ))} */}
             </div>
           </div>
-          {/* <div>
-            <div>
-              <h1 className="font-semibold text-[26px] text-secondary-500 mt-16">
-                Career Highlights
-              </h1>
-              <div className="bg-primary-500 w-[100px] h-[2px] mt-2"></div>
-            </div>
-            {career.map(({ id, title }) => (
-              <div
-                key={id}
-                className="flex flex-row space-y-6 items-center space-x-3 mt-6"
-              >
-                <img src={check} alt="" />
-                <p className="font-normal text-xl text-black">{title}</p>
-              </div>
-            ))}
-          </div> */}
         </div>
       ))}
     </div>

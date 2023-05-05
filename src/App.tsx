@@ -20,7 +20,6 @@ function App() {
       </Helmet>
       <MainHeader />
       <Outlet />
-      <FooterImage />
       <Footer />
     </div>
   );
