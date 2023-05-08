@@ -21,7 +21,7 @@ export const TeamsData: TeamsProps[] = [
     title: "Chief Commercial Officer",
     name: "Fergus Clarkson",
     image: Fergus,
-    portfolio: `Previously at Atlas Capital Markets he helped to grow the firm’s presence and deal scope across 
+    portfolio: `Previously at Atlas Capital Markets LLC he helped to grow the firm’s presence and deal scope across 
     the UK and other regions. Before joining Atlas in 2022 he was at Makor Securities in London for 
     10 years where he worked as a Sales Trader in Equity Derivatives, FX and Fixed Income. Before 
     that worked for a boutique investment bank specialising in corporate transactions in the 
