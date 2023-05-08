@@ -5,10 +5,14 @@ import Locations from "../assets/images/locations.svg";
 import ServiceComponent from "../Components/Services/ServiceComponent";
 import FooterImage from "../Components/FooterImage";
 import logo from "../assets/images/logo.svg";
-
+import { useLazyLoad } from "../Components/useLazyLoad";
 const Home = () => {
+  const { source, imageRef } = useLazyLoad(
+    Locations,
+    "/path/to/default/placeholder/image.jpg"
+  );
   return (
-    <div className="w-full">
+    <div className="w-full" ref={imageRef}>
       <HeroSection backgroundImage={Banner}>
         {/* <h1
           className="header font-light text-[60px]"
@@ -18,7 +22,7 @@ const Home = () => {
         >
           <span className="text-white font-bold">CLG</span> CAPITAL
         </h1> */}
-        <img src={logo} alt="" width={400} />
+        <img src={logo} alt="" width={400} loading="lazy" />
         <p
           className="sub text-[38px]"
           data-aos="fade-up"
@@ -51,7 +55,7 @@ const Home = () => {
       <ServiceComponent />
       <div
         className="locations w-full h-[650px] bg-cover bg-no-repeat bg-center my-10 2xl:h-[800px]"
-        style={{ backgroundImage: `url(${Locations})` }}
+        style={{ backgroundImage: `url(${source})` }}
       ></div>
       <FooterImage backgroundImage={Banner} />
     </div>

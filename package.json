@@ -1,5 +1,6 @@
 {
   "name": "clg-website",
+  "homepage": "https://clgcap.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",

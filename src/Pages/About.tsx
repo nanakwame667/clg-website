@@ -5,10 +5,16 @@ import Highlights from "../Components/Highlights";
 import Locations from "../assets/images/locations.svg";
 import FooterImage from "../Components/FooterImage";
 import { Helmet } from "react-helmet";
+import { useLazyLoad } from "../Components/useLazyLoad";
 
 const About = () => {
+  // Use the custom useLazyLoad hook for the backgroundImage
+  const { source, imageRef } = useLazyLoad(
+    Locations,
+    "/path/to/default/placeholder/image.jpg"
+  );
   return (
-    <div>
+    <div ref={imageRef}>
       <HeroSection backgroundImage={Banner}>
         <h1 className="header font-light text-[60px]">
           <span className="text-white font-bold">ABOUT</span> US
@@ -78,7 +84,7 @@ const About = () => {
       <Highlights />
       <div
         className="locations w-full h-[650px] bg-cover bg-no-repeat bg-center my-10 2xl:h-[800px]"
-        style={{ backgroundImage: `url(${Locations})` }}
+        style={{ backgroundImage: `url(${source})` }}
       ></div>
       {/* <p className="location-text text-center text-black font-normal text-2xl pt-6">
         Our global presence spans across multiple locations, ensuring we are
