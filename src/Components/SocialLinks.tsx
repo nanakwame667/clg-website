@@ -1,5 +1,5 @@
 import { SocialsData } from "../Data/SocialsData";
-import { Link } from "react-router-dom";
+import { memo } from "react";
 const SocialLinks = () => {
   return (
     <div className="flex flex-row justify-center items-center w-full px-6">
@@ -18,4 +18,4 @@ const SocialLinks = () => {
   );
 };
 
-export default SocialLinks;
+export default memo(SocialLinks);

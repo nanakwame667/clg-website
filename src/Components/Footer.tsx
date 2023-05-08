@@ -3,7 +3,6 @@ import Logo from "./Logo";
 import SocialLinks from "./SocialLinks";
 import ContactDetails from "./ContactDetails";
 import FooterLinks from "./FooterLinks";
-import Newsletter from "./Newsletter";
 
 const Footer = () => {
   return (
@@ -28,10 +27,6 @@ const Footer = () => {
             <FooterLinks />
           </div>
         </div>
-        {/* <div className="flex flex-col">
-          <h1 className="text-primary-500 font-medium text-xl">Newsletter</h1>
-          <Newsletter />
-        </div> */}
       </div>
       <div className="w-full flex items-center justify-center">
         <h1>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import { NavLink, NavLinkProps, useNavigate } from "react-router-dom";
 
 interface ReloadNavLinkProps extends NavLinkProps {}
@@ -36,4 +36,4 @@ const Link: React.FC<ReloadNavLinkProps> = ({
   );
 };
 
-export default Link;
+export default memo(Link);

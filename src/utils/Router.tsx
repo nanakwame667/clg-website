@@ -1,10 +1,42 @@
 import { createBrowserRouter } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import App from "../App";
-import Home from "../Pages/Home";
-import Services from "../Pages/Services";
-import Team from "../Pages/Team";
-import About from "../Pages/About";
-import Contact from "../Pages/Contact";
+
+const Home = lazy(() => import("../Pages/Home"));
+const Services = lazy(() => import("../Pages/Services"));
+const Team = lazy(() => import("../Pages/Team"));
+const About = lazy(() => import("../Pages/About"));
+const Contact = lazy(() => import("../Pages/Contact"));
+
+const LazyHome = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <Home />
+  </Suspense>
+);
+
+const LazyServices = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <Services />
+  </Suspense>
+);
+
+const LazyTeam = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <Team />
+  </Suspense>
+);
+
+const LazyAbout = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <About />
+  </Suspense>
+);
+
+const LazyContact = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <Contact />
+  </Suspense>
+);
 
 export const router = createBrowserRouter([
   {
@@ -13,23 +45,23 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <LazyHome />,
       },
       {
         path: "/services/",
-        element: <Services />,
+        element: <LazyServices />,
       },
       {
         path: "/team",
-        element: <Team />,
+        element: <LazyTeam />,
       },
       {
         path: "/about",
-        element: <About />,
+        element: <LazyAbout />,
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: <LazyContact />,
       },
     ],
   },

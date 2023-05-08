@@ -1,5 +1,6 @@
 import { AboutData } from "../Data/AboutData";
 import check from "../assets/images/check.svg";
+import { memo } from "react";
 
 const Highlights = () => {
   return (
@@ -22,4 +23,4 @@ const Highlights = () => {
   );
 };
 
-export default Highlights;
+export default memo(Highlights);

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import Header from "./Header";
 import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
@@ -100,4 +100,4 @@ const MainHeader = () => {
   );
 };
 
-export default MainHeader;
+export default memo(MainHeader);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 
 interface HeaderProps {
   stickyAt: number;
@@ -38,4 +38,4 @@ const Header: React.FC<HeaderProps> = ({ stickyAt, className, children }) => {
   );
 };
 
-export default Header;
+export default memo(Header);

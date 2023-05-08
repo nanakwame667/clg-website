@@ -5,14 +5,10 @@ import Locations from "../assets/images/locations.svg";
 import ServiceComponent from "../Components/Services/ServiceComponent";
 import FooterImage from "../Components/FooterImage";
 import logo from "../assets/images/logo.svg";
-import { useLazyLoad } from "../Components/useLazyLoad";
+
 const Home = () => {
-  const { source, imageRef } = useLazyLoad(
-    Locations,
-    "/path/to/default/placeholder/image.jpg"
-  );
   return (
-    <div className="w-full" ref={imageRef}>
+    <div className="w-full">
       <HeroSection backgroundImage={Banner}>
         {/* <h1
           className="header font-light text-[60px]"
@@ -55,11 +51,11 @@ const Home = () => {
       <ServiceComponent />
       <div
         className="locations w-full h-[650px] bg-cover bg-no-repeat bg-center my-10 2xl:h-[800px]"
-        style={{ backgroundImage: `url(${source})` }}
+        style={{ backgroundImage: `url(${Locations})` }}
       ></div>
       <FooterImage backgroundImage={Banner} />
     </div>
   );
 };
 
-export default Home;
+export default React.memo(Home);

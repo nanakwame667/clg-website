@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 interface TruncatedTextProps {
   text: string;
@@ -25,4 +25,4 @@ const TruncatedText: React.FC<TruncatedTextProps> = ({
   );
 };
 
-export default TruncatedText;
+export default memo(TruncatedText);

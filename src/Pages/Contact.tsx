@@ -2,6 +2,7 @@ import HeroSection from "../Components/HeroSection";
 import Banner from "../assets/images/contact-banner.jpeg";
 import { ContactData } from "../Data/ContactData";
 import FooterImage from "../Components/FooterImage";
+import { memo } from "react";
 
 const Contact = () => {
   return (
@@ -49,4 +50,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

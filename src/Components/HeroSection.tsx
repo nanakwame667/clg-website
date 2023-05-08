@@ -1,5 +1,4 @@
 import React, { ReactNode, FC } from "react";
-import { useLazyLoad } from "./useLazyLoad";
 
 interface HeroSectionProps {
   backgroundImage: string;
@@ -11,16 +10,10 @@ const HeroSection: FC<HeroSectionProps> = ({
   children,
   className,
 }) => {
-  // Use the custom useLazyLoad hook for the backgroundImage
-  const { source, imageRef } = useLazyLoad(
-    backgroundImage,
-    "/path/to/default/placeholder/image.jpg"
-  );
   return (
     <div
-      ref={imageRef}
       className={`hero relative w-full h-[850px] bg-cover bg-no-repeat bg-center ${className}`}
-      style={{ backgroundImage: `url(${source})` }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-[#000] opacity-40 bg-blend-overlay"></div>
       <div className="relative z-10 flex flex-col text-white space-y-6 items-center justify-center w-full h-full">
@@ -30,4 +23,4 @@ const HeroSection: FC<HeroSectionProps> = ({
   );
 };
 
-export default HeroSection;
+export default React.memo(HeroSection);

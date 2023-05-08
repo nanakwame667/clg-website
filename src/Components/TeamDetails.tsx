@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import TeamsItem from "./TeamsItem";
 
 const TeamDetails = () => {
@@ -12,20 +12,10 @@ const TeamDetails = () => {
         >
           Management Team
         </h1>
-        {/* <p
-          className="text-black text-2xl  w-2/4"
-          data-aos="fade-right"
-          data-aos-easing="ease-out-cubic"
-          data-aos-delay="300"
-          data-aos-offset="0"
-        >
-          The executive team possesses specialized expertise, complimentary
-          skillsets and a strong working relationship
-        </p> */}
       </div>
       <TeamsItem />
     </div>
   );
 };
 
-export default TeamDetails;
+export default memo(TeamDetails);

@@ -4,6 +4,7 @@ import MainHeader from "./Components/MainHeader";
 import Footer from "./Components/Footer";
 import FooterImage from "./Components/FooterImage";
 import { Helmet } from "react-helmet";
+import { memo } from "react";
 
 function App() {
   return (
@@ -25,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

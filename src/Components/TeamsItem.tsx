@@ -1,6 +1,5 @@
-import React from "react";
+import React, { memo } from "react";
 import { TeamsData } from "../Data/TeamsData";
-import check from "../assets/images/check.svg";
 
 const TeamsItem = () => {
   return (
@@ -37,4 +36,4 @@ const TeamsItem = () => {
   );
 };
 
-export default TeamsItem;
+export default memo(TeamsItem);
