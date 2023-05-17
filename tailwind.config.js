@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "576px",
+        "3xl": "1600px",
+      },
       fontFamily: {
         poppins: ["Poppins"],
       },

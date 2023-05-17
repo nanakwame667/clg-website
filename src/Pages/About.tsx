@@ -76,10 +76,11 @@ const About = () => {
         <div className="bg-primary-500 w-[100px] h-[2px] mt-2"></div>
       </div>
       <Highlights />
-      <div
-        className="locations w-full h-[650px] bg-cover bg-no-repeat bg-center my-10 2xl:h-[800px]"
-        style={{ backgroundImage: `url(${Locations})` }}
-      ></div>
+      <img
+        className=" w-full h-full lg:h-[650px] bg-cover bg-no-repeat bg-center lg:bg-cover lg:bg-no-repeat lg:bg-center my-10 2xl:h-[1000px] 3xl:h-[1200px] sm:h-[300px] sm:bg-contain"
+        src={Locations}
+        alt="location"
+      ></img>
       {/* <p className="location-text text-center text-black font-normal text-2xl pt-6">
         Our global presence spans across multiple locations, ensuring we are
         well-

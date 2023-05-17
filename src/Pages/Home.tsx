@@ -49,10 +49,11 @@ const Home = () => {
         </p>
       </div>
       <ServiceComponent />
-      <div
-        className="locations w-full h-[650px] bg-cover bg-no-repeat bg-center my-10 2xl:h-[800px]"
-        style={{ backgroundImage: `url(${Locations})` }}
-      ></div>
+      <img
+        className=" w-full h-full lg:h-[650px] bg-cover bg-no-repeat bg-center lg:bg-cover lg:bg-no-repeat lg:bg-center my-10 2xl:h-[1000px] 3xl:h-[1200px] sm:h-[300px] sm:bg-contain"
+        src={Locations}
+        alt="location"
+      ></img>
       <FooterImage backgroundImage={Banner} />
     </div>
   );
