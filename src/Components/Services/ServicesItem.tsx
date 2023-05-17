@@ -15,7 +15,7 @@ const ServicesItem = () => {
             data-aos-duration="2000"
           >
             <div className="flex items-center justify-center bg-primary-50 px-4 py-4 rounded-full ">
-              <img src={svg} alt="" />
+              <img src={svg} alt="" className="w-6" />
             </div>
             <div className="space-y-4 mt-6 ">
               <h1 className="text-secondary-500 font-semibold xl:text-[20px] 2xl:text-[30px]">
