@@ -12,7 +12,7 @@ export const ContactData: ContactProps[] = [
   },
   {
     id: 2,
-    name: "fergus@clgcap.com",
+    name: "charles@clgcap.com",
     svg: email,
   },
   {
